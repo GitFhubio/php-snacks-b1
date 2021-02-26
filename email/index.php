@@ -6,13 +6,13 @@
 </head>
 <body>
     <?php
-    if ($_GET) {
-      echo 'Ci sono elementi in get';
-    } else {
-    echo 'Non ci sono elementi in get';
-
-      }
-      var_dump(count($_GET));
+    // if ($_GET) {
+    //   echo 'Ci sono elementi in get';
+    // } else {
+    // echo 'Non ci sono elementi in get';
+    //
+    //   }
+    //   var_dump(count($_GET));
 
 // function areValid($name,$email,$age)
 // {
@@ -41,15 +41,34 @@ function isValidEmail($email)
     }
 };
 
+// function areAllFieldsFilled()
+// {if(count($_GET)==3){
+//   return true;
+// } else {return false;}
+// }
+function areAllFieldsFilled($name,$email,$age)
+{if(!empty($name) && !empty($email) && !empty($age)){
+  return true;
+} else {return false;}
+}
+
+if (areAllFieldsFilled($_GET["name"],$_GET["email"],$_GET["age"]) && isValidName($_GET["name"]) && isValidEmail($_GET["email"]) && is_numeric($_GET["age"])) {
+
+      $message = 'Accesso riuscito' ;}
+     else
+       {$message = 'Accesso negato';}
+
     ?>
-     <div>
-    <?php if (count($_GET)==3 && isValidName($_GET["name"]) && isValidEmail($_GET["email"]) && is_numeric($_GET["age"])) { ?>
-
-      <div><p><?php echo 'Accesso riuscito' ?></p></div>
-    <?php } else { ?>
-      <div><p><?php echo 'Accesso negato'?></p></div>
-      <?php } ?>
-    </div>
-
+    
+    <!DOCTYPE html>
+    <html lang="en" dir="ltr">
+      <head>
+        <meta charset="utf-8">
+        <title></title>
+      </head>
+      <body>
+        <p><?php echo $message ?></p>
+      </body>
+    </html>
 </body>
 </html>
