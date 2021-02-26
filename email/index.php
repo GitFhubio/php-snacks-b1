@@ -6,28 +6,44 @@
 </head>
 <body>
     <?php
-    // if ($_GET) {
-    //   echo 'Ci sono elementi in get';
-    // } else {
-    // echo 'Non ci sono elementi in get';
-    //
-    //   }
+    if ($_GET) {
+      echo 'Ci sono elementi in get';
+    } else {
+    echo 'Non ci sono elementi in get';
 
+      }
+      var_dump(count($_GET));
 
-function areValid($name,$email,$age)
+// function areValid($name,$email,$age)
+// {
+//   if ($_GET && strlen($name) >= 4 && strpos($email, '@') !==false && strpos($email, '.') !==false && is_numeric($age)) {
+//     return true;}
+//     else {
+//       return false;
+//     }
+// }
+
+function isValidName($name)
 {
-  if ($_GET && strlen($name) >= 4 && strpos($email, '@') !==false && strpos($email, '.') !==false && is_numeric($age)) {
+  if (strlen($name) >= 4) {
     return true;}
     else {
       return false;
     }
-}
+};
+
+function isValidEmail($email)
+{
+  if (strpos($email, '@') !==false && strpos($email, '.') !==false) {
+    return true;}
+    else {
+      return false;
+    }
+};
 
     ?>
      <div>
-      <!-- potrebbe esserci problema se metto !=false o non metto proprio niente
-      zero lo prenderà come un true -->
-    <?php if (areValid($_GET["name"],$_GET["email"],$_GET["age"])) { ?>
+    <?php if (count($_GET)==3 && isValidName($_GET["name"]) && isValidEmail($_GET["email"]) && is_numeric($_GET["age"])) { ?>
 
       <div><p><?php echo 'Accesso riuscito' ?></p></div>
     <?php } else { ?>
