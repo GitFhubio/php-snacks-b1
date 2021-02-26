@@ -58,6 +58,7 @@ for ($i=0; $i < count($matches) ; $i++) { ?>
 </ul>
 
 <ul>
+
   <h2>prova for each</h2>
 
 <?php
@@ -65,7 +66,31 @@ foreach ($matches as $el) { ?>
 <li> <?php echo $el["home"] . ' - ' . $el["away"]. ' | ' . $el["homePoints"] . ' - ' . $el["awayPoints"] ; ?> </li>
 <?php } ?>
 </ul>
+<?php
+if(array_key_exists('alfredo',$matches[0])){
+  echo 'exists';
+} else {
+  echo 'doesn\' t exist';
+}
+if(in_array(55, $matches[0])){
+  echo 'exists';
+    var_dump(in_array (55, $matches[0]));
+} else {
+  echo 'doesn\' t exist';
+}
+if(array_search (55, $matches[0])){
+  echo 'exists';
+  // dà pure chiave prima occorrenza trovata mentre in array è solo booleano
+  var_dump(array_search (55, $matches[0]));
+} else {
+  echo 'doesn\' t exist';
+}
 
+$pippo=[4,5,7,8,9];
+$pluto=[2,5,7,8,9];
+$paperino=array_merge($pippo,$pluto);
+print_r($paperino);
+ ?>
 
 </body>
 </html>
