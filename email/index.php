@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <title>email</title>
-</head>
-<body>
-    <?php
+  <?php
     // if ($_GET) {
     //   echo 'Ci sono elementi in get';
     // } else {
@@ -59,7 +52,7 @@ if (areAllFieldsFilled($_GET["name"],$_GET["email"],$_GET["age"]) && isValidName
        {$message = 'Accesso negato';}
 
     ?>
-    
+
     <!DOCTYPE html>
     <html lang="en" dir="ltr">
       <head>
@@ -70,5 +63,3 @@ if (areAllFieldsFilled($_GET["name"],$_GET["email"],$_GET["age"]) && isValidName
         <p><?php echo $message ?></p>
       </body>
     </html>
-</body>
-</html>
