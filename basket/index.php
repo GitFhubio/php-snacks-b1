@@ -45,6 +45,10 @@ $matches = [
     'awayPoints'=>98
   ]
 ];
+
+// var_dump($matches);
+// echo '<br>';
+// print_r($matches);
   ?>
   <ul>
 <?php
