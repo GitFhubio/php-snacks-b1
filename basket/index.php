@@ -25,6 +25,24 @@ $matches = [
     'away'=>'Utah Jazz',
     'homePoints'=>85,
     'awayPoints'=>84
+  ],
+  [
+    'home'=>'Golden State Warrios',
+    'away'=>'Brooklyn Nets',
+    'homePoints'=>89,
+    'awayPoints'=>90
+  ],
+  [
+    'home'=>'Miami Heat',
+    'away'=>'Chicago Bulls',
+    'homePoints'=>77,
+    'awayPoints'=>76
+  ],
+  [
+    'home'=>'Cleveland Cavaliers',
+    'away'=>'Toronto Raptors',
+    'homePoints'=>92,
+    'awayPoints'=>98
   ]
 ];
   ?>
