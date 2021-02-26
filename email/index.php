@@ -39,13 +39,14 @@ function isValidEmail($email)
 //   return true;
 // } else {return false;}
 // }
-function areAllFieldsFilled($name,$email,$age)
-{if(!empty($name) && !empty($email) && !empty($age)){
-  return true;
-} else {return false;}
-}
+// function areAllFieldsFilled($name,$email,$age)
+// {if(!empty($name) && !empty($email) && !empty($age)){
+//   return true;
+// } else {return false;}
+// }
+// queste verifiche sono implicite con le verifiche sottostanti
 
-if (areAllFieldsFilled($_GET["name"],$_GET["email"],$_GET["age"]) && isValidName($_GET["name"]) && isValidEmail($_GET["email"]) && is_numeric($_GET["age"])) {
+if (isValidName($_GET["name"]) && isValidEmail($_GET["email"]) && is_numeric($_GET["age"])) {
 
       $message = 'Accesso riuscito' ;}
      else
