@@ -47,7 +47,7 @@ function isValidEmail($email)
 // queste verifiche sono implicite con le verifiche sottostanti
 
 if (isValidName($_GET["name"]) && isValidEmail($_GET["email"]) && is_numeric($_GET["age"])) {
-
+// c'è anche is_int solo per numero no stringa
       $message = 'Accesso riuscito' ;}
      else
        {$message = 'Accesso negato';}
