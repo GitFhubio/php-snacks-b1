@@ -90,6 +90,20 @@ $pippo=[4,5,7,8,9];
 $pluto=[2,5,7,8,9];
 $paperino=array_merge($pippo,$pluto);
 print_r($paperino);
+$paperino[]='paperina';
+array_push($paperino,'paperoga');
+print_r($paperino);
+function randomArray($min, $max, $nItems)
+{
+   $newArray = [];
+   while (count($newArray) < $nItems) {
+       $number = rand($min, $max);
+       if (!in_array($number, $newArray)) {
+           $newArray[] = $number;
+} }
+   return $newArray;
+}
+print_r(randomArray(1, 100, 5));
  ?>
 
 </body>
