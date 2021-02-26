@@ -27,11 +27,13 @@ $matches = [
     'awayPoints'=>84
   ]
 ];
-
-for ($i=0; $i < count($matches) ; $i++) {
-  echo $matches[$i]["home"] . ' - ' . $matches[$i]["away"]. ' | ' . $matches[$i]["homePoints"] . ' - ' . $matches[$i]["awayPoints"] . '<br />';
-}
   ?>
+  <ul>
+<?php
+for ($i=0; $i < count($matches) ; $i++) { ?>
+  <li> <?php echo $matches[$i]["home"] . ' - ' . $matches[$i]["away"]. ' | ' . $matches[$i]["homePoints"] . ' - ' . $matches[$i]["awayPoints"] ; ?> </li>
+<?php } ?>
+</ul>
 
 </body>
 </html>
